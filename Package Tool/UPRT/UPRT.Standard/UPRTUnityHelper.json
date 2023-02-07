@@ -1,0 +1,53 @@
+{
+  // Unity Package 타이틀 이름
+  "PackageTitle": "UPRT",
+  // Unity Package Source의 DLL 빌드용 메소드
+  "BuildUnitySourceMethod": "uprt.editor.UPRTPackageManager.BuildWin64",
+  // Unity Sync GUID 메소드
+  "SyncGUIDsMethod": "uprt.editor.UPRTPackageManager.GetGUIDs",
+  // Unity 실행 파일 디렉토리
+  "UnityPath": "C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Unity.exe",
+  // Unity Package 프로젝트 디렉토리
+  "UnityProjectPath": "C:/workspace/Unity Package Release Tool/UPRT",
+  // Unity Package가 구성된 패키지 경로
+  "PublishRootPath": "C:/workspace/Unity Package Release Tool/UPRT Publish/UPRT",
+  // Unity Package가 구성된 패키지를 타겟으로 테스트할 Unity 테스트 프로젝트
+  "PublishTargetProjectPath": "C:/workspace/Unity Package Release Tool/UPRT Publish/UPRT Publish Test Project",
+  // 패키지를 구성할 파일 콘텐츠
+  "PackageContent": [
+    {
+      "Name": "테스트 콘텐츠",
+      "ContentType": "Runtime",
+      "CopyForce": true,
+      "Targets": [
+        "UPRT.Test.dll"
+      ]
+    },
+    {
+      "Name": "테스트 샘플 콘텐츠",
+      "ContentType": "TestProject",
+      "CopyForce": true,
+      "Targets": [
+        "Assets/Samples/UPRTSample >>> Assets/Samples/UPRTSample",
+        "Assets/Samples/UPRTSample.meta >>> Assets/Samples/UPRTSample.meta"
+      ]
+    },
+    {
+      "Name": "샘플 콘텐츠",
+      "ContentType": "Sample",
+      "CopyForce": true,
+      "Targets": [
+        "Assets/Samples/UPRTSample >>> Samples~/UPRTSample",
+        "Assets/Samples/UPRTSample.meta >>> Samples~/UPRTSample.meta"
+      ]
+    }
+  ],
+  // GUID를 Sync할 대상 콘텐츠
+  "GUIDSyncTargets": {
+    "Start": "projectGUIDs.json",
+    "Destination": "packageGUIDs.json",
+    "TargetNames": [
+
+    ]
+  }
+}

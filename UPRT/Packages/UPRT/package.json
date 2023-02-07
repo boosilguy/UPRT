@@ -1,0 +1,19 @@
+{
+    "name":"uprt",
+    "displayName": "UPRT",
+    "version": "1.0.0",
+    "description": "UPRT Test SDK",
+    "keywords": [
+        "uprt",
+        "uprt test",
+        "uprt test sdk",
+        "unity package release tool"
+    ],
+    "author": {
+        "name": "Keonhee Park",
+        "email": "dev.keonhee@gmail.com",
+        "url": ""
+    },
+    "dependencies": {},
+    "samples": null
+}
