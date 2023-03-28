@@ -1,1 +1,1 @@
-C:\workspace\Unity Package Release Tool\UPRT
+C:\workspace\UPRT\UPRT

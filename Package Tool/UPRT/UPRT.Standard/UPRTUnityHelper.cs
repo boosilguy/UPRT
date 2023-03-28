@@ -25,6 +25,7 @@ namespace UPRT.Standard
         const int FAIL_CODE = 1;
 
         const string SYNC_GUID_TARGET_ARGS = "-output";
+        const string PACKAGES_DIR = "Packages";
         const string SCRIPT_ASSEMBLIES_DIR = "Library/ScriptAssemblies";
         const string RUNTIME_PUBLISH_DIR = "Runtime/Plugins";
         const string EDITOR_PUBLISH_DIR = "Editor/Plugins";
@@ -148,7 +149,7 @@ namespace UPRT.Standard
                         TestProjectCopier(item.Targets);
                         break;
                     case Enums.ContentType.Package:
-                        TestProjectCopier(item.Targets);
+                        PackageCopier(item.Targets);
                         break;
                 }
             }
@@ -308,7 +309,7 @@ namespace UPRT.Standard
         void RuntimeCopier(string[] fileNames, bool force = true)
         {
             string projectPath = Path.Combine(this.setter.UnityProjectPath, SCRIPT_ASSEMBLIES_DIR);
-            string publishPath = Path.Combine(this.setter.PublishRootPath, this.setter.PackageTitle, RUNTIME_PUBLISH_DIR);
+            string publishPath = Path.Combine(this.setter.PublishRootPath, RUNTIME_PUBLISH_DIR);
 
             foreach (var item in fileNames)
             {
@@ -322,7 +323,7 @@ namespace UPRT.Standard
         void EditorCopier(string[] fileNames, bool force = true)
         {
             string projectPath = Path.Combine(this.setter.UnityProjectPath, SCRIPT_ASSEMBLIES_DIR);
-            string publishPath = Path.Combine(this.setter.PublishRootPath, this.setter.PackageTitle, EDITOR_PUBLISH_DIR);
+            string publishPath = Path.Combine(this.setter.PublishRootPath, EDITOR_PUBLISH_DIR);
 
             foreach (var item in fileNames)
             {
@@ -367,12 +368,8 @@ namespace UPRT.Standard
         {
             foreach (var item in fileNames)
             {
-                string[] components = Regex.Split(item, START_TO_DEST_PARSER);
-
-                if (components.Length != 2) throw new FormatException($"Default File ({item})의 형식이 적절치 않습니다.");
-
-                string target = Path.Combine(this.setter.UnityProjectPath, components[0]);
-                string publish = Path.Combine(this.setter.PublishRootPath, components[1]);
+                string target = Path.Combine(this.setter.UnityProjectPath, PACKAGES_DIR, this.setter.PackageTitle, item);
+                string publish = Path.Combine(this.setter.PublishRootPath, item);
 
                 CopyUtility.Copy(target, publish, force, Log);
             }

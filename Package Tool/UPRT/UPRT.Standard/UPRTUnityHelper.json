@@ -16,11 +16,19 @@
   // 패키지를 구성할 파일 콘텐츠
   "PackageContent": [
     {
-      "Name": "테스트 콘텐츠",
+      "Name": "테스트 런타임 콘텐츠",
       "ContentType": "Runtime",
       "CopyForce": true,
       "Targets": [
         "UPRT.Test.dll"
+      ]
+    },
+    {
+      "Name": "테스트 에디터 콘텐츠",
+      "ContentType": "Editor",
+      "CopyForce": true,
+      "Targets": [
+        "UPRT.Test.Editor.dll"
       ]
     },
     {
@@ -39,6 +47,21 @@
       "Targets": [
         "Assets/Samples/UPRTSample >>> Samples~/UPRTSample",
         "Assets/Samples/UPRTSample.meta >>> Samples~/UPRTSample.meta"
+      ]
+    },
+    {
+      "Name": "패키징 기본 아이템",
+      "ContentType": "Package",
+      "CopyForce": true,
+      "Targets": [
+        "CHANGELOG.md >>> CHANGELOG.md",
+        "CHANGELOG.md.meta >>> CHANGELOG.md.meta",
+        "LICENSE.md >>> LICENSE.md",
+        "LICENSE.md.meta >>> LICENSE.md.meta",
+        "README.md >>> README.md",
+        "README.md.meta >>> README.md.meta",
+        "Third Party Notices.md >>> Third Party Notices.md",
+        "Third Party Notices.md.meta >>> Third Party Notices.md.meta"
       ]
     }
   ],

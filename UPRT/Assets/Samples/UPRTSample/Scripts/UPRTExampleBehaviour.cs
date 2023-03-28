@@ -7,15 +7,19 @@ namespace sample.uprt
 {
     public class UPRTExampleBehaviour : MonoBehaviour
     {
+        private GameObject uprtCube;
         private void Start()
         {
-            UPRTTest uprtTest = new UPRTTest();
-            uprtTest.Print();
+            uprtCube = GameObject.Find("UPRTTest Cube");
+
+            if (uprtCube == null)
+                Debug.LogError("[UPRTExampleBehaviour] Can't find");
         }
 
         private void Update()
         {
-            this.gameObject.transform.Rotate(Vector3.up * Time.deltaTime * 100, Space.World);
+            if (uprtCube != null)
+                uprtCube.transform.Rotate(Vector3.up * Time.deltaTime * 100, Space.World);
         }
     }
 }

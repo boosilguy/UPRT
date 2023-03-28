@@ -776,6 +776,10 @@
       <Project>{786939D6-B53E-6576-1C1C-8DDCE0471E2A}</Project>
       <Name>UPRT.TEST</Name>
     </ProjectReference>
+    <ProjectReference Include="UPRT.TEST.Editor.csproj">
+      <Project>{E574BB5E-E66F-CC98-A376-731A09C7DB88}</Project>
+      <Name>UPRT.TEST.Editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
