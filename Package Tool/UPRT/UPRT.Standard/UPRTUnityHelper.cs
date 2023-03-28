@@ -27,6 +27,8 @@ namespace UPRT.Standard
         const string SYNC_GUID_TARGET_ARGS = "-output";
         const string PACKAGES_DIR = "Packages";
         const string SCRIPT_ASSEMBLIES_DIR = "Library/ScriptAssemblies";
+        const string BUILDED_ASSEMBLIES_DIR = "Build/Build_Data/Managed";
+
         const string RUNTIME_PUBLISH_DIR = "Runtime/Plugins";
         const string EDITOR_PUBLISH_DIR = "Editor/Plugins";
 
@@ -322,7 +324,7 @@ namespace UPRT.Standard
 
         void EditorCopier(string[] fileNames, bool force = true)
         {
-            string projectPath = Path.Combine(this.setter.UnityProjectPath, SCRIPT_ASSEMBLIES_DIR);
+            string projectPath = Path.Combine(this.setter.UnityProjectPath, BUILDED_ASSEMBLIES_DIR);
             string publishPath = Path.Combine(this.setter.PublishRootPath, EDITOR_PUBLISH_DIR);
 
             foreach (var item in fileNames)

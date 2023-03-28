@@ -10,6 +10,7 @@ namespace uprt.editor
     /// </summary>
     public partial class UPRTPackageManager
     {
+        [MenuItem("UPRT/Builder/Win64")]
         /// <summary>
         /// 윈도우 빌드
         /// </summary>

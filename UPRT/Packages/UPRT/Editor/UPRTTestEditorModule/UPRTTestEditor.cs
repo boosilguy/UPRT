@@ -5,10 +5,10 @@ using UnityEditor;
 
 namespace uprt.test
 {
-    public class UPRTTestEditor : EditorWindow
+    public class UPRTTestEditor
     {
         [MenuItem("UPRT/Create UPRT Object/Cube")]
-        static void Create_UPRTCube()
+        public static void Create_UPRTCube()
         {
             if (UPRTTest.CreateUPRTTestObject())
             {
