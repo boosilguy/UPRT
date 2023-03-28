@@ -1,9 +1,0 @@
-{
-  "profiles": {
-    "UPRT": {
-      "commandName": "Project",
-      "commandLineArgs": "standard",
-      "workingDirectory": "C:\\workspace\\UnityPackageReleaseTool\\UPRT\\UPRT\\bin\\Debug\\net6.0"
-    }
-  }
-}
