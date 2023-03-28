@@ -8,12 +8,12 @@
   // Unity 실행 파일 디렉토리
   "UnityPath": "C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Unity.exe",
   // Unity Package 프로젝트 디렉토리
-  "UnityProjectPath": "C:/workspace/Unity Package Release Tool/UPRT",
+  "UnityProjectPath": "C:/workspace/UPRT/UPRT",
   // Unity Package가 구성된 패키지 경로
-  "PublishRootPath": "C:/workspace/Unity Package Release Tool/UPRT Publish/UPRT",
+  "PublishRootPath": "C:/workspace/UPRT/UPRT Publish/UPRT",
   // Unity Package가 구성된 패키지를 타겟으로 테스트할 Unity 테스트 프로젝트
-  "PublishTargetProjectPath": "C:/workspace/Unity Package Release Tool/UPRT Publish/UPRT Publish Test Project",
-  // 패키지를 구성할 파일 콘텐츠
+  "PublishTargetProjectPath": "C:/workspace/UPRT/UPRT Publish/UPRT Publish Test Project",
+  // 패키지를 구성할 파일 콘텐츠 중, 복사 대상들
   "PackageContent": [
     {
       "Name": "테스트 런타임 콘텐츠",
@@ -54,6 +54,8 @@
       "ContentType": "Package",
       "CopyForce": true,
       "Targets": [
+        "package.json >>> package.json",
+        "package.json.meta >>> package.json.meta",
         "CHANGELOG.md >>> CHANGELOG.md",
         "CHANGELOG.md.meta >>> CHANGELOG.md.meta",
         "LICENSE.md >>> LICENSE.md",

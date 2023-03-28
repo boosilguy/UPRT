@@ -310,7 +310,7 @@ namespace UPRT.Standard
 
         void RuntimeCopier(string[] fileNames, bool force = true)
         {
-            string projectPath = Path.Combine(this.setter.UnityProjectPath, SCRIPT_ASSEMBLIES_DIR);
+            string projectPath = Path.Combine(this.setter.UnityProjectPath, BUILDED_ASSEMBLIES_DIR);
             string publishPath = Path.Combine(this.setter.PublishRootPath, RUNTIME_PUBLISH_DIR);
 
             foreach (var item in fileNames)
@@ -324,7 +324,7 @@ namespace UPRT.Standard
 
         void EditorCopier(string[] fileNames, bool force = true)
         {
-            string projectPath = Path.Combine(this.setter.UnityProjectPath, BUILDED_ASSEMBLIES_DIR);
+            string projectPath = Path.Combine(this.setter.UnityProjectPath, SCRIPT_ASSEMBLIES_DIR);
             string publishPath = Path.Combine(this.setter.PublishRootPath, EDITOR_PUBLISH_DIR);
 
             foreach (var item in fileNames)
@@ -370,9 +370,13 @@ namespace UPRT.Standard
         {
             foreach (var item in fileNames)
             {
-                string target = Path.Combine(this.setter.UnityProjectPath, PACKAGES_DIR, this.setter.PackageTitle, item);
-                string publish = Path.Combine(this.setter.PublishRootPath, item);
+                string[] components = Regex.Split(item, START_TO_DEST_PARSER);
 
+                if (components.Length != 2) throw new FormatException($"Package File ({item})의 형식이 적절치 않습니다.");
+
+                string target = Path.Combine(this.setter.UnityProjectPath, PACKAGES_DIR, this.setter.PackageTitle, components[0]);
+                string publish = Path.Combine(this.setter.PublishRootPath, components[1]);
+                
                 CopyUtility.Copy(target, publish, force, Log);
             }
         }
@@ -409,11 +413,11 @@ namespace UPRT.Standard
 
             // Package GUID
             foreach (var extension in GuidSyncExtensions)
-                fileList.AddRange(Directory.GetFiles(Path.Combine(this.setter.PublishRootPath, this.setter.PackageTitle), extension, SearchOption.AllDirectories));
+                fileList.AddRange(Directory.GetFiles(this.setter.PublishRootPath, extension, SearchOption.AllDirectories));
 
             // Publish Test Project GUID
             foreach (var extension in GuidSyncExtensions)
-                fileList.AddRange(Directory.GetFiles(Path.Combine(this.setter.PublishTargetProjectPath), extension, SearchOption.AllDirectories));
+                fileList.AddRange(Directory.GetFiles(this.setter.PublishTargetProjectPath, extension, SearchOption.AllDirectories));
 
             var syncItem = from packageGUIDs in this.publishPackageAssetGUIDs
                            join testProjectGUIDs in this.publishProjectAssetGUIDs on packageGUIDs.Name equals testProjectGUIDs.Name
