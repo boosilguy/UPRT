@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "eXY6RWzLmC1NnCJYxqNnSfHEA/kR8OZ2ABMQ73fjXDdHPKljHAyARGhIrcLnzztQtEj7pl/3+q/mkgHvoHfzDg==",
+  "success": true,
+  "projectFilePath": "C:\\workspace\\UPRT\\Package Tool\\UPRT\\UPRT\\UPRT.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\박건희\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

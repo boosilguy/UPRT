@@ -32,6 +32,10 @@ Unity Package 배포를 관리할 수 있도록 구현된 툴입니다. C# 코�
 
 사실, Unity 2020.3 버전을 타겟으로 구성한 프로젝트지만, 21.3 버전에서는 ScriptAssemblies 디렉토리의 DLL을 타겟해야함을 뒤늦게 파악하였다. 20.3 버전을 바탕으로 작업하였을 땐, PlayerDataCache의 DLL을 사용했지만 (Editor 전처리기 코드 때문), 21.3 버전에서는 PlayerDataCache에 DLL이 떨어지지 않아, ScriptAssemblies내 DLL을 사용했다. 이 경우에는 Editor code도 동봉되어, SDK를 Import하였을 때 Editor에서 예상치 못한 기능이나 로직이 돌아갈 수 있다. 이 점을 조금 더 연구해 볼 필요가 있겠다. 
 
+### 23.03.28
+
+Editor에 Local Build 로직을 추가하여, Runtime시 Editor 관련 코드가 빠질 DLL을 추출할 수 있도록 대응하였다.
+
 ## NPM
 
 - tarball

@@ -1,0 +1,18 @@
+{
+    "name": "UPRT.TEST.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e2e0fc6ef840c7f45952405afd4cb342"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

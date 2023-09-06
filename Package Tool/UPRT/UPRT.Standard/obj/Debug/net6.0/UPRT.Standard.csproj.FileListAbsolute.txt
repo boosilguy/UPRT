@@ -1,0 +1,13 @@
+C:\workspace\UPRT\Package Tool\UPRT\UPRT.Standard\bin\Debug\net6.0\UPRTUnityHelper.json
+C:\workspace\UPRT\Package Tool\UPRT\UPRT.Standard\bin\Debug\net6.0\UPRT.Standard.deps.json
+C:\workspace\UPRT\Package Tool\UPRT\UPRT.Standard\bin\Debug\net6.0\UPRT.Standard.dll
+C:\workspace\UPRT\Package Tool\UPRT\UPRT.Standard\bin\Debug\net6.0\UPRT.Standard.pdb
+C:\workspace\UPRT\Package Tool\UPRT\UPRT.Standard\obj\Debug\net6.0\UPRT.Standard.csproj.AssemblyReference.cache
+C:\workspace\UPRT\Package Tool\UPRT\UPRT.Standard\obj\Debug\net6.0\UPRT.Standard.GeneratedMSBuildEditorConfig.editorconfig
+C:\workspace\UPRT\Package Tool\UPRT\UPRT.Standard\obj\Debug\net6.0\UPRT.Standard.AssemblyInfoInputs.cache
+C:\workspace\UPRT\Package Tool\UPRT\UPRT.Standard\obj\Debug\net6.0\UPRT.Standard.AssemblyInfo.cs
+C:\workspace\UPRT\Package Tool\UPRT\UPRT.Standard\obj\Debug\net6.0\UPRT.Standard.csproj.CoreCompileInputs.cache
+C:\workspace\UPRT\Package Tool\UPRT\UPRT.Standard\obj\Debug\net6.0\UPRT.Standard.dll
+C:\workspace\UPRT\Package Tool\UPRT\UPRT.Standard\obj\Debug\net6.0\refint\UPRT.Standard.dll
+C:\workspace\UPRT\Package Tool\UPRT\UPRT.Standard\obj\Debug\net6.0\UPRT.Standard.pdb
+C:\workspace\UPRT\Package Tool\UPRT\UPRT.Standard\obj\Debug\net6.0\ref\UPRT.Standard.dll
