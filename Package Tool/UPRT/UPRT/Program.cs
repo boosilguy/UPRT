@@ -53,6 +53,7 @@ namespace UPRT
                             uprtHelper.CopySampleItems();
                             break;
                         case Command_Help:
+                            PrintGuide();
                             break;
                     }
                 }
