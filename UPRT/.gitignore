@@ -62,7 +62,7 @@ ExportedObj/
 sysinfo.txt
 
 # Builds
-# *.apk
+*.apk
 *.unitypackage
 
 # Crashlytics generated file
@@ -73,7 +73,3 @@ crashlytics-build.properties
 
 # Mac
 .DS_Store
-
-# SRDebugger
-StompyRobot/
-Assets/StompyRobot.meta
